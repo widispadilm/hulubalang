@@ -1,0 +1,211 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum InternalRole {
+  ADMIN
+  MARKETING
+  OPERATION
+  FINANCE
+  MANAGEMENT
+  DRIVER
+  POOL_KEEPER
+}
+
+enum ShipmentType {
+  TOWING
+  SELF_DRIVE
+}
+
+enum OrderStatus {
+  PENDING
+  CONFIRMED
+  CANCELED
+}
+
+enum TripStatus {
+  REQUESTED
+  ASSIGNED
+  VEHICLE_PICKED_UP
+  IN_TRANSIT
+  REPORTED_AT_POOL
+  AT_POOL
+  AT_ORIGIN_PORT
+  ON_VESSEL
+  AT_DESTINATION_PORT
+  OUT_FOR_DELIVERY
+  DELIVERED
+  DELAY
+  CANCELED
+  CLAIM
+  HOLD
+}
+
+enum CheckpointStatus {
+  REPORTED
+  VERIFIED
+  REJECTED
+}
+
+enum PaymentStatus {
+  UNPAID
+  PAID
+  OVERDUE
+}
+
+// Pelanggan / Mitra — akses Web User, login email + OTP
+model Customer {
+  id          String   @id @default(cuid())
+  companyName String
+  pic         String
+  email       String   @unique
+  phone       String?
+  createdAt   DateTime @default(now())
+
+  orders   Order[]
+  otpCodes OtpCode[]
+}
+
+model OtpCode {
+  id         String   @id @default(cuid())
+  customer   Customer @relation(fields: [customerId], references: [id], onDelete: Cascade)
+  customerId String
+  codeHash   String
+  expiresAt  DateTime
+  consumedAt DateTime?
+  createdAt  DateTime @default(now())
+
+  @@index([customerId])
+}
+
+// User internal — akses Web Admin (Marketing/Operation/Finance/Management/Admin)
+// dan Driver/Pool Keeper (tampilan mobile terbatas)
+model InternalUser {
+  id           String       @id @default(cuid())
+  name         String
+  email        String       @unique
+  passwordHash String
+  role         InternalRole
+  active       Boolean      @default(true)
+  createdAt    DateTime     @default(now())
+
+  confirmedOrders   Order[]           @relation("MarketingConfirmedOrders")
+  assignedTrips     Trip[]            @relation("OperationAssignedTrips")
+  driverTrips       Trip[]            @relation("DriverTrips")
+  managedPools      Pool[]            @relation("PoolKeeperPools")
+  reportedCheckpoints  TripCheckpoint[] @relation("ReportedByDriver")
+  verifiedCheckpoints  TripCheckpoint[] @relation("VerifiedByPoolKeeper")
+}
+
+// Pool / depot tempat kendaraan transit (checkpoint verifikasi)
+model Pool {
+  id      String @id @default(cuid())
+  name    String
+  address String
+
+  poolKeepers TripCheckpoint[]
+  keepers     InternalUser[]   @relation("PoolKeeperPools")
+
+  createdAt DateTime @default(now())
+}
+
+model Order {
+  id                String      @id @default(cuid())
+  orderNumber       String?     @unique
+  customer          Customer    @relation(fields: [customerId], references: [id])
+  customerId        String
+  pic               String
+  originCity        String
+  destinationCity   String
+  requestPickupDate DateTime
+  specialInstruction String?
+  status            OrderStatus @default(PENDING)
+
+  confirmedBy   InternalUser? @relation("MarketingConfirmedOrders", fields: [confirmedById], references: [id])
+  confirmedById String?
+
+  trips     Trip[]
+  invoices  Invoice[]
+  createdAt DateTime @default(now())
+}
+
+// 1 Trip = 1 unit kendaraan dalam sebuah Order (multi-unit -> trip number turunan)
+model Trip {
+  id           String       @id @default(cuid())
+  tripNumber   String?      @unique
+  order        Order        @relation(fields: [orderId], references: [id])
+  orderId      String
+  shipmentType ShipmentType
+
+  vehicleBrand String
+  vehicleModel String
+  plateNumber  String
+  chassisNumber String
+  engineNumber  String
+
+  status TripStatus @default(REQUESTED)
+  eta    DateTime?
+
+  assignedBy   InternalUser? @relation("OperationAssignedTrips", fields: [assignedById], references: [id])
+  assignedById String?
+  driver       InternalUser? @relation("DriverTrips", fields: [driverId], references: [id])
+  driverId     String?
+
+  checkpoints TripCheckpoint[]
+  documents   Document[]
+  invoice     Invoice?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+// Verifikasi dua langkah: driver report -> pool keeper verify
+model TripCheckpoint {
+  id     String           @id @default(cuid())
+  trip   Trip             @relation(fields: [tripId], references: [id])
+  tripId String
+  pool   Pool             @relation(fields: [poolId], references: [id])
+  poolId String
+  status CheckpointStatus @default(REPORTED)
+
+  reportedBy   InternalUser @relation("ReportedByDriver", fields: [reportedById], references: [id])
+  reportedById String
+  reportedAt   DateTime     @default(now())
+  reportNote   String?
+  photoUrl     String?
+
+  verifiedBy   InternalUser? @relation("VerifiedByPoolKeeper", fields: [verifiedById], references: [id])
+  verifiedById String?
+  verifiedAt   DateTime?
+  verifyNote   String?
+}
+
+model Document {
+  id       String   @id @default(cuid())
+  trip     Trip     @relation(fields: [tripId], references: [id])
+  tripId   String
+  type     String // DO_PO | BSTK | POD | SURAT_JALAN | SUPPORTING
+  fileUrl  String
+  uploadedAt DateTime @default(now())
+}
+
+model Invoice {
+  id             String        @id @default(cuid())
+  invoiceNumber  String        @unique
+  order          Order         @relation(fields: [orderId], references: [id])
+  orderId        String
+  trip           Trip          @relation(fields: [tripId], references: [id])
+  tripId         String        @unique
+  tarif          Decimal       @db.Decimal(14, 2)
+  additionalCost Decimal       @default(0) @db.Decimal(14, 2)
+  ppnRate        Decimal       @default(1.1) @db.Decimal(5, 2)
+  subTotal       Decimal       @db.Decimal(14, 2)
+  grandTotal     Decimal       @db.Decimal(14, 2)
+  paymentStatus  PaymentStatus @default(UNPAID)
+  invoiceDate    DateTime      @default(now())
+}

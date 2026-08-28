@@ -1,0 +1,15 @@
+services:
+  db:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: pss
+      POSTGRES_PASSWORD: pss
+      POSTGRES_DB: hulubalang
+    ports:
+      - "5433:5432"
+    volumes:
+      - pss_db_data:/var/lib/postgresql/data
+
+volumes:
+  pss_db_data:
