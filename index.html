@@ -1,0 +1,870 @@
+<!-- index.blade.php -->
+
+
+
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ekspedisi Darat &amp; Laut Terpercaya - PT PSS</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="PT Putra Seganti Setungguan (PT PSS) adalah penyedia jasa ekspedisi dan pengiriman kendaraan darat &amp; laut terpercaya ke seluruh Indonesia sejak tahun 2001. Layanan Self Drive dan Tow Car aman, tepat waktu, dan terpercaya.">
+    <meta name="keywords" content="PT PSS, Putra Seganti Setungguan, ekspedisi kendaraan, pengiriman mobil, tow car, self drive, jasa pengiriman kendaraan Indonesia">
+    <meta name="author" content="PT Putra Seganti Setungguan">
+    <link rel="canonical" href="http://putrasegantisetungguan.com">
+
+    <!-- Open Graph (Facebook, WhatsApp, dll) -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Ekspedisi Darat &amp; Laut Terpercaya - PT PSS">
+    <meta property="og:description" content="Jasa ekspedisi dan pengiriman kendaraan darat &amp; laut terpercaya ke seluruh Indonesia sejak 2001.">
+    <meta property="og:url" content="http://putrasegantisetungguan.com">
+    <meta property="og:image" content="http://putrasegantisetungguan.com/img/kami.webp">
+    <meta property="og:site_name" content="PT Putra Seganti Setungguan">
+    <meta property="og:locale" content="id_ID">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Ekspedisi Darat &amp; Laut Terpercaya - PT PSS">
+    <meta name="twitter:description" content="Jasa ekspedisi dan pengiriman kendaraan darat &amp; laut terpercaya ke seluruh Indonesia.">
+    <meta name="twitter:image" content="http://putrasegantisetungguan.com/img/kami.webp">
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "PT Putra Seganti Setungguan",
+        "alternateName": "PT PSS",
+        "url": "http://putrasegantisetungguan.com",
+        "logo": "http://putrasegantisetungguan.com/img/logo.webp",
+        "description": "Penyedia jasa ekspedisi dan pengiriman kendaraan darat & laut terpercaya ke seluruh Indonesia sejak tahun 2001.",
+        "foundingDate": "2001",
+        "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "ID"
+        },
+        "sameAs": []
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" type="image/x-icon" href="http://putrasegantisetungguan.com/favicon.ico">
+
+    <link rel="preload" as="style" href="http://putrasegantisetungguan.com/build/assets/app-IcXkxtxK.css" /><link rel="preload" as="style" href="http://putrasegantisetungguan.com/build/assets/@fontsource-BF5UEzsp.css" /><link rel="modulepreload" as="script" href="http://putrasegantisetungguan.com/build/assets/app-Bsq7oNdy.js" /><link rel="modulepreload" as="script" href="http://putrasegantisetungguan.com/build/assets/alpinejs-CWk4R-Yb.js" /><link rel="modulepreload" as="script" href="http://putrasegantisetungguan.com/build/assets/axios-CDLOVPMa.js" /><link rel="stylesheet" href="http://putrasegantisetungguan.com/build/assets/app-IcXkxtxK.css" /><link rel="stylesheet" href="http://putrasegantisetungguan.com/build/assets/@fontsource-BF5UEzsp.css" /><script type="module" src="http://putrasegantisetungguan.com/build/assets/app-Bsq7oNdy.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" media="print" onload="this.media='all'">
+    <style>
+        @font-face {
+            font-family: 'Font Awesome 5 Free';
+            font-display: block;
+        }
+        @font-face {
+            font-family: 'Font Awesome 6 Free';
+            font-display: block;
+        }
+    </style>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fcfbf7;
+            scroll-behavior: smooth;
+            position: relative;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            z-index: -1;
+            background-image: url('http://putrasegantisetungguan.com/img/batiik (1).webp'); 
+            background-repeat: repeat;
+            background-size: 120px 120px;
+            transform: rotate(45deg);
+            opacity: 0.05; 
+            pointer-events: none; 
+        }
+        .navbar-transition {
+            transition: all 0.3s ease-in-out;
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden min-h-screen flex flex-col">
+
+    <nav id="main-navbar" class="fixed top-0 right-0 left-0 z-50 navbar-transition bg-transparent text-white px-2 py-3 border-2 border-transparent">
+    <div class="max-w-6xl w-full mx-auto flex justify-between items-center text-sm">
+        <div class="flex items-center">
+            <img src="http://putrasegantisetungguan.com/img/logo/LOGO PSS.webp" alt="logo" class="w-24 h-12 md:w-32 md:h-12 object-contain ">
+        </div>
+        
+        <div class="hidden md:flex items-center space-x-6 text-gray-200 font-semibold text-lg md:text-xl lg:text-2xl">
+            <a href="/" class="hover:text-white transition text-green-800 font-bold transition">Beranda</a>
+            <a href="/tentangKami" class="text-gray-200 hover:text-white transition">Tentang Kami</a>
+            <a href="/artikel" class="text-gray-200 hover:text-white transition">Artikel</a>
+            
+            <div class="relative inline-block text-left">
+                <button onclick="toggleDropdownMenu(this)" type="button" 
+                    class="flex items-center gap-1.5 hover:text-white transition focus:outline-none cursor-pointer">
+                    <a class="text-gray-200 hover:text-white transition">Layanan</a>
+                    <i class="fas fa-chevron-down text-xs dropdown-arrow transition-transform duration-200 opacity-80"></i>
+                </button>
+
+                <div class="dropdown-panel hidden absolute left-0 mt-3 w-44 rounded-2xl bg-[#FCFBF7] border border-emerald-500/10 shadow-xl z-50 overflow-hidden">
+                    <div class="py-1.5 flex flex-col">
+                        <a href="/selfdrive" class="px-4 py-2.5 text-xs sm:text-sm text-gray-700 hover:bg-emerald-50 hover:text-emerald-800 font-medium transition flex items-center gap-2">
+                            <i class="fas fa-car text-emerald-500 text-xs w-4"></i> Self drive
+                        </a>
+                        <a href="/towcar" class="px-4 py-2.5 text-xs sm:text-sm text-gray-700 hover:bg-emerald-50 hover:text-emerald-800 font-medium transition flex items-center gap-2">
+                            <i class="fas fa-truck-pickup text-emerald-500 text-xs w-4"></i> Tow car
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="hidden md:flex items-center space-x-4">
+            <a href="http://putrasegantisetungguan.com/login">
+                <img src="http://putrasegantisetungguan.com/icon/Vector.svg" alt="login" class="w-6 h-6" class="hover:translate-y-1 ease-in-out transition-all duration-500">
+            </a>
+        </div>
+        
+        <button onclick="toggleMobileMenu()" class="relative z-50 text-2xl md:hidden focus:outline-none p-2 cursor-pointer" aria-label="Toggle Menu">
+            <i class="fas fa-bars"></i>
+        </button>
+
+    <div id="mobile-menu" class="hidden md:hidden bg-emerald-900/60 backdrop-blur-xl text-white w-full absolute left-0 top-full px-6 py-4 shadow-xl border-t border-white/10 z-50 animate-fade-in">
+        <div class="flex flex-col space-y-3 font-medium">
+            <a href="/" class="hover:text-emerald-200 transition py-1 border-b border-white/5 text-emerald-300 font-bold">
+                Beranda
+            </a>
+            <a href="/tentangKami" class="hover:text-emerald-200 transition py-1 border-b border-white/5 text-gray-100">
+                Tentang Kami
+            </a>
+            <a href="/artikel" class="hover:text-emerald-200 transition py-1 border-b border-white/5 text-gray-100">
+                Artikel
+            </a>
+            
+            <div class="w-full">
+                <button onclick="toggleMobileSubMenu(this)" class="w-full flex items-center justify-between hover:text-emerald-200 transition py-1 text-gray-100 focus:outline-none cursor-pointer">
+                    <span>Layanan</span>
+                    <i class="fas fa-chevron-down text-xs sub-arrow transition-transform duration-200 opacity-80"></i>
+                </button>
+                
+                <div class="sub-menu-panel hidden flex flex-col pl-4 mt-1 space-y-2 border-l border-white/10 animate-slide-down">
+                    <a href="/selfdrive" class="text-sm text-gray-200 hover:text-emerald-300 py-1 transition flex items-center gap-2">
+                        <i class="fas fa-car text-xs text-emerald-400"></i> Self Drive
+                    </a>
+                    <a href="/towcar" class="text-sm text-gray-200 hover:text-emerald-300 py-1 transition flex items-center gap-2">
+                        <i class="fas fa-truck-pickup text-xs text-emerald-400"></i> Tow Car
+                    </a>
+                </div>
+            </div>
+            
+            <a href="http://putrasegantisetungguan.com/login" class="hover:text-emerald-200 transition py-1 border-t border-white/10 text-gray-100">
+                Login
+            </a>
+        </div>
+    </div>
+</nav>
+
+<script>
+// Fungsi 1: Handle Dropdown Layanan (Desktop)
+function toggleDropdownMenu(button) {
+    const panel = button.nextElementSibling;
+    const arrow = button.querySelector('.dropdown-arrow');
+    
+    panel.classList.toggle('hidden');
+    if (arrow) arrow.classList.toggle('rotate-180');
+}
+
+// Fungsi 2: Handle Hamburger Menu (Mobile) - Dipanggil langsung lewat onclick
+function toggleMobileMenu() {
+    const mobileMenu = document.getElementById('mobile-menu');
+    if (mobileMenu) {
+        mobileMenu.classList.toggle('hidden');
+    }
+}
+function toggleMobileSubMenu(button) {
+    const subPanel = button.nextElementSibling;
+    const arrow = button.querySelector('.sub-arrow');
+    
+    if (subPanel) {
+        subPanel.classList.toggle('hidden');
+    }
+    if (arrow) {
+        arrow.classList.toggle('rotate-180');
+    }
+}
+
+// Fungsi 3: Menutup semua menu jika user klik di sembarang tempat di luar menu
+document.addEventListener('click', function (e) {
+    // Tutup Dropdown Layanan jika klik di luar
+    const allPanels = document.querySelectorAll('.dropdown-panel');
+    allPanels.forEach(panel => {
+        const button = panel.previousElementSibling;
+        if (button && !button.contains(e.target) && !panel.contains(e.target)) {
+            panel.classList.add('hidden');
+            const arrow = button.querySelector('.dropdown-arrow');
+            if (arrow) arrow.classList.remove('rotate-180');
+        }
+    });
+
+    // Tutup Menu Mobile jika klik di luar area menu (Kecuali klik langsung tombol/menunya)
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuBtn = e.target.closest('button[onclick="toggleMobileMenu()"]');
+    
+    if (mobileMenu && !mobileMenu.contains(e.target) && !menuBtn) {
+        mobileMenu.classList.add('hidden');
+    }
+});
+</script>
+    <main class="flex-1 flex flex-col">
+            <!-- 1. HERO SECTION -->
+    <header class="relative min-h-screen flex flex-col justify-between text-white text-center px-4 pt-24 overflow-hidden">
+    
+    <img src="http://putrasegantisetungguan.com/img/kami.webp" 
+         alt="Background Towcarr" 
+         class="absolute inset-0 w-full h-full object-cover z-0"
+         fetchpriority="high">
+    
+    <div class="absolute inset-0 bg-gradient-to-t from-[#4CA62B]/50 to-[#2BA661]/50 z-10"></div>
+
+    <div class="relative z-20 max-w-4xl mx-auto my-auto py-12" data-aos="zoom-in" data-aos-duration="1000">
+        <h1 class="text-3xl md:text-5xl font-semibold mb-4 leading-tight">
+            Ekspedisi Darat dan Laut<br>Terpercaya ke Seluruh Indonesia
+        </h1>
+        <p class="text-sm md:text-base max-w-2xl mx-auto opacity-90 mb-8">
+            Terpercaya di Indonesia yang menyediakan solusi<br> pengiriman kendaraan secara aman, tepat waktu, dan terpercaya. Serta terintegrasi melalui jalur darat serta laut
+        </p>
+        <a href="https://wa.me/6281296866705" target="blank" class="hover:shadow-[#7EA62B] group relative inline-flex items-center justify-between bg-[#4CA62B] text-white font-semibold text-base  pl-10 pr-3 py-3 md:pl-10 md:pr-3 md:py-3 rounded-full min-w-[100px] md:min-w-[200px] transition duration-300 ease-in-out hover:bg-[#439527]  hover:shadow-2xl transform hover:scale-110  focus:outline-none">
+            <span class="tracking-wide">Konsultasi</span>
+            <div class="flex items-center justify-center bg-white h-8 w-8 rounded-full shadow-sm transition duration-300 ease-in-out ml-4 md:ml-none">
+                <i class="fas fa-chevron-right text-black text-xs transition duration-300 ease-in-out group-hover:text-[#4CA62B]"></i>
+            </div>
+        </a>
+    </div>
+</header>
+
+    <!-- 2. PASTI SECTION -->
+    <section class="relative overflow-hidden bg-[#4CA62B] py-12 md:py-0 px-3 md:px-4 min-h-screen md:h-screen h-auto flex flex-col justify-center items-center">
+
+        <div class="absolute -top-32 -right-32 xl:-top-24 xl:-right-24 w-80 h-80 rounded-full bg-[#7EA62B] blur-xl pointer-events-none z-0 "></div>
+
+        <div class="absolute -bottom-32 -left-32 xl:-bottom-24 xl:-left-24 w-80 h-80 rounded-full bg-[#7EA62B] blur-xl pointer-events-none z-0 "></div>
+
+        <div class="relative z-10 w-full justify-center">
+            <div class="text-center text-white mb-8 md:mb-16">
+                <p class="text-xs md:text-base font-medium opacity-90 tracking-wide mb-1">Kirim Kendaraan Anda</p>
+                <h2 class="text-md md:text-2xl font-bold tracking-wide">dengan <span class="text-white tracking-widest font-extrabold">P.A.S.T.I</span></h2>
+            </div>
+
+            <div class="w-full max-w-6xl mx-auto grid grid-cols-5 gap-2 sm:gap-4 md:gap-10 lg:gap-14 px-1" data-aos="fade-right" data-aos-delay="100">
+            
+                <div class="group bg-white text-[#00AD68] p-2 sm:p-4 md:p-6 rounded-[16px] sm:rounded-[30px] md:rounded-[50px] shadow-md md:shadow-lg flex flex-col justify-center items-center w-full aspect-square  hover:shadow-2xl hover:shadow-[#00AD68]/40 hover:-translate-y-1 hover:scale-105 transition-all duration-300 ease-out cursor-default">
+                    <span class="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-black mb-0.5 md:mb-1 leading-none transition-transform duration-300 group-hover:scale-110">P</span>
+                    <span class="text-[7px] sm:text-[10px] md:text-xs font-bold text-center leading-tight max-w-[110px] transition-colors duration-300 group-hover:text-gray-600">Pelayanan Beragam</span>
+                </div>
+
+                <div class="group bg-white text-[#00AD68] p-2 sm:p-4 md:p-6 rounded-[16px] sm:rounded-[30px] md:rounded-[50px] shadow-md md:shadow-lg flex flex-col justify-center items-center w-full aspect-square transform hover:scale-105  transition duration-300 ease-out cursor-default hover:shadow-[#00AD68]/40 hover:-translate-y-1 ">
+                    <span class="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-black mb-0.5 md:mb-1 leading-none transition-transform duration-300 group-hover:scale-110">A</span>
+                    <span class="text-[7px] sm:text-[10px] md:text-xs font-bold text-center leading-tight max-w-[110px] transition-colors duration-300 group-hover:text-gray-600">Aman dan terpercaya</span>
+                </div>
+
+                <div class="group bg-white text-[#00AD68] p-2 sm:p-4 md:p-6 rounded-[16px] sm:rounded-[30px] md:rounded-[50px] shadow-md md:shadow-lg flex flex-col justify-center items-center w-full aspect-square transform hover:scale-105  transition duration-300 ease-out cursor-default hover:shadow-[#00AD68]/40 hover:-translate-y-1 ">
+                    <span class="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-black mb-0.5 md:mb-1 leading-none transition-transform duration-300 group-hover:scale-110">S</span>
+                    <span class="text-[7px] sm:text-[10px] md:text-xs font-bold text-center leading-tight max-w-[110px] transition-colors duration-300 group-hover:text-gray-600">Servis prima</span>
+                </div>
+
+                <div class="group bg-white text-[#00AD68] p-2 sm:p-4 md:p-6 rounded-[16px] sm:rounded-[30px] md:rounded-[50px] shadow-md md:shadow-lg flex flex-col justify-center items-center w-full aspect-square transform hover:scale-105  transition duration-300 ease-out cursor-default hover:shadow-[#00AD68]/40 hover:-translate-y-1 ">
+                    <span class="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-black mb-0.5 md:mb-1 leading-none transition-transform duration-300 group-hover:scale-110">T</span>
+                    <span class="text-[7px] sm:text-[10px] md:text-xs font-bold text-center leading-tight max-w-[110px] transition-colors duration-300 group-hover:text-gray-600">Tepat waktu</span>
+                </div>
+
+                <div class="group bg-white text-[#00AD68] p-2 sm:p-4 md:p-6 rounded-[16px] sm:rounded-[30px] md:rounded-[50px] shadow-md md:shadow-lg flex flex-col justify-center items-center w-full aspect-square transform hover:scale-105  transition duration-300 ease-out cursor-default hover:shadow-[#00AD68]/40 hover:-translate-y-1 ">
+                    <span class="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-black mb-0.5 md:mb-1 leading-none transition-transform duration-300 group-hover:scale-110">I</span>
+                    <span class="text-[7px] sm:text-[10px] md:text-xs font-bold text-center leading-tight max-w-[110px] transition-colors duration-300 group-hover:text-gray-600">Ikatan mitra</span>
+                </div>
+
+            </div>
+        </div>
+        
+    </section>
+
+    <!-- 3. LAYANAN SECTION -->
+<section class="w-full h-auto md:h-screen py-16 md:py-0 px-4 md:px-16 max-w-7xl mx-auto overflow-x-hidden md:overflow-hidden flex flex-col justify-center"> 
+    
+    <div class="text-center mb-8 md:mb-12" data-aos="fade-up">
+        <h2 class="text-2xl md:text-3xl font-bold text-[#4CA62B] mb-1">Layanan</h2>
+        <p class="text-sm md:text-lg text-gray-500">Silakan klik pada pilihan layanan untuk melihat lebih detail.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12 max-w-6xl mx-auto w-full" data-aos="fade-right" data-aos-duration="900">
+        
+        <div class="bg-white rounded-2xl overflow-hidden shadow-sm border-2 border-[#4CA62B] hover:shadow-2xl hover:scale-105 transition-all duration-300 ease-in-out flex flex-col">
+            <div class="h-44 md:h-60 w-full overflow-hidden">
+                <img src="http://putrasegantisetungguan.com/img/selfdrivee.webp" alt="Self Drive" class="w-full h-full object-cover hover:scale-105 transition duration-300" loading="lazy">
+            </div>
+            <div class="p-5 md:p-6 flex-1 flex flex-col justify-between">
+                <div>
+                    <span class="inline-block bg-[#4CA62B] text-white text-sm md:text-xl font-semibold px-3 py-1 rounded-lg mb-2">Self Drive</span>
+                    <p class="text-xs md:text-sm text-gray-600 leading-relaxed mb-4">
+                        Metode pengiriman kendaraan di mana mobil Anda akan dikendarai dan diantarkan langsung oleh pengemudi profesional dari perusahaan kami hingga ke lokasi tujuan.
+                    </p>
+                </div>
+                <a href="/selfdrive" class="group/link inline-flex items-center gap-1 text-xs text-gray-400 hover:text-[#4CA62B] font-medium transition duration-200 mt-2">
+                    <span>Baca lebih lengkap</span>
+                    <i class="fas fa-arrow-right text-[10px] transform group-hover/link:translate-x-1 transition duration-200"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-2xl overflow-hidden shadow-sm border-2 border-[#4CA62B] hover:shadow-2xl hover:scale-105 transition-all duration-300 ease-in-out flex flex-col">
+            <div class="h-44 md:h-60 w-full overflow-hidden">
+                <img src="http://putrasegantisetungguan.com/img/towcar.webp" alt="Tow car" class="w-full h-full object-cover hover:scale-105 transition duration-300" loading="lazy">
+            </div>
+            <div class="p-5 md:p-6 flex-1 flex flex-col justify-between">
+                <div>
+                    <span class="inline-block bg-[#4CA62B] text-white text-sm md:text-xl font-semibold px-3 py-1 rounded-lg mb-2">Tow Car</span>
+                    <p class="text-xs md:text-sm text-gray-600 leading-relaxed mb-4">
+                        Layanan pengiriman mobil premium menggunakan armada truk towing khusus, di mana satu truk hanya mengangkut satu kendaraan secara eksklusif.
+                    </p>
+                </div>
+                <a href="/selfdrive" class="group/link inline-flex items-center gap-1 text-xs text-gray-400 hover:text-[#4CA62B] font-medium transition duration-200 mt-2">
+                    <span>Baca lebih lengkap</span>
+                    <i class="fas fa-arrow-right text-[10px] transform group-hover/link:translate-x-1 transition duration-200"></i>
+                </a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- 4. TENTANG KAMI SECTION -->
+<section class="relative min-h-screen md:h-screen w-full bg-[#fcfbf7] flex flex-col justify-center overflow-hidden">
+    
+    <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-8 md:gap-12 items-center px-4 md:px-16 py-12 md:py-0 flex-grow w-full">
+
+        <div data-aos="fade-right" data-aos-easing="ease-in-out" class="md:text-left">
+            <h2 class="text-2xl md:text-3xl font-bold text-[#4CA62B] mb-8">Tentang Kami</h2>
+            <div class="text-xs md:text-sm text-gray-600 space-y-4 leading-relaxed text-justify">
+                <p>
+                    <strong class="text-gray-800">PT. Putra Seganti Setungguan (PT. PSS)</strong> adalah penyedia jasa pengiriman dan penarikan mobil nasional yang profesional.
+                </p>
+                <p>
+                    Melanjutkan rekam jejak sukses sejak tahun 2001 (sebagai CV Guta Mandiri) sebelum resmi menjadi PT pada 2017, kami memadukan tenaga kerja berkualitas dan manajemen modern untuk menyajikan layanan ekspedisi yang menyeluruh, aman, dan saling menguntungkan.
+                </p>
+            </div>
+            <div class="pt-8 flex justify-center md:justify-start">
+                <a href="/tentangKami" class="group relative inline-flex items-center justify-between text-base pl-8 pr-3 py-3 hover:shadow-[#7EA62B] rounded-full min-w-[200px] bg-[#4CA62B] text-white font-semibold  transition duration-300 ease-in-out hover:bg-[#439527] hover:shadow-2xl transform hover:scale-110 focus:outline-none">
+                    <span class="tracking-wide">selengkapnya</span>
+                    <div class="flex items-center justify-center bg-white h-8 w-8 rounded-full shadow-sm transition duration-300 ease-in-out">
+                        <i class="fas fa-chevron-right text-black text-xs transition duration-300 ease-in-out group-hover:text-[#4CA62B]"></i>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="md:flex items-end md:justify-end" data-aos="fade-left">
+
+            <img src="http://putrasegantisetungguan.com/img/kami.webp"  
+                class="rounded-[2.5rem] shadow-md  border-2 border-[#4CA62B]/50 hover:border-2 hover:border-[#4CA62B] w-full max-w-sm  aspect-[4/3] object-cover hover:scale-105 transition duration-300 ease-in-out hover:shadow-xl hover:shadow-[#4CA62B]/50" 
+                alt="towcarr"
+                loading="lazy">
+        </div>
+
+    </div>
+
+    <div class="relative z-10 overflow-hidden bg-[#4caf50] p-4  w-full mt-auto" data-aos="fade-up">
+        <div class="absolute -top-32 -right-32 xl:-top-24 xl:-right-24 w-80 h-80 rounded-full bg-[#7EA62B] blur-3xl pointer-events-none z-0 "></div>
+        <div class="absolute -bottom-32 -left-32 xl:-bottom-24 xl:-left-24 w-80 h-80 rounded-full bg-[#7EA62B] blur-3xl pointer-events-none z-0 "></div>
+        <div class="overflow-hidden w-full">
+            <div id="foto-slider" class="inline-flex gap-4">
+                                    <div class="flex-shrink-0 w-48 md:w-64 h-32 md:h-40 rounded-lg overflow-hidden shadow-md">
+                        <img src="http://putrasegantisetungguan.com/fotos/6a5a02ec6ea21_1784283884.webp"
+                             alt="Foto"
+                             class="w-full h-full object-cover"
+                             loading="lazy">
+                    </div>
+                                    <div class="flex-shrink-0 w-48 md:w-64 h-32 md:h-40 rounded-lg overflow-hidden shadow-md">
+                        <img src="http://putrasegantisetungguan.com/fotos/6a5a046eef018_1784284270.webp"
+                             alt="Foto"
+                             class="w-full h-full object-cover"
+                             loading="lazy">
+                    </div>
+                                    <div class="flex-shrink-0 w-48 md:w-64 h-32 md:h-40 rounded-lg overflow-hidden shadow-md">
+                        <img src="http://putrasegantisetungguan.com/fotos/6a6599b55235f_1785043381.webp"
+                             alt="Foto"
+                             class="w-full h-full object-cover"
+                             loading="lazy">
+                    </div>
+                                                                             <div class="flex-shrink-0 w-48 md:w-64 h-32 md:h-40 rounded-2xl overflow-hidden shadow-lg border border-white/10">
+                            <img src="http://putrasegantisetungguan.com/fotos/6a5a02ec6ea21_1784283884.webp"
+                                 alt="Foto Dokumentasi Duplikat"
+                                 class="w-full h-full object-cover">
+                        </div>
+                                            <div class="flex-shrink-0 w-48 md:w-64 h-32 md:h-40 rounded-2xl overflow-hidden shadow-lg border border-white/10">
+                            <img src="http://putrasegantisetungguan.com/fotos/6a5a046eef018_1784284270.webp"
+                                 alt="Foto Dokumentasi Duplikat"
+                                 class="w-full h-full object-cover">
+                        </div>
+                                            <div class="flex-shrink-0 w-48 md:w-64 h-32 md:h-40 rounded-2xl overflow-hidden shadow-lg border border-white/10">
+                            <img src="http://putrasegantisetungguan.com/fotos/6a6599b55235f_1785043381.webp"
+                                 alt="Foto Dokumentasi Duplikat"
+                                 class="w-full h-full object-cover">
+                        </div>
+                                                </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    #foto-slider {
+        animation: slideLoop 20s linear infinite;
+        will-change: transform;
+    }
+    @keyframes slideLoop {
+        0%   { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+    }
+</style>
+
+    <!-- 6. PARTNER KAMI SECTION -->
+<section class="w-full min-h-screen md:h-screen bg-transparent py-4 md:py-8 px-4 md:px-32 flex flex-col justify-between items-center  ">
+    
+    <div class="text-center my-auto pt-2 pb-2" data-aos="fade-up">
+        <h2 class="text-2xl md:text-3xl font-bold text-[#4CA62B] ">Partner Kami</h2>
+        <div class="w-10 h-0.5 bg-[#4CA62B] mx-auto mt-1 rounded-full md:hidden"></div>
+    </div>
+
+    <div class="w-full max-w-5xl mx-auto grid grid-cols-3 lg:grid-cols-4 gap-4 my-auto" data-aos="fade-up" data-aos-delay="200">
+        
+        <div class="bg-white rounded-xl md:rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.02)] p-2 md:p-2 flex justify-center items-center border border-gray-100/50 hover:scale-105 ease-in-out transition-all duration-500">
+            <img src="http://putrasegantisetungguan.com/img/logo/hyundai.webp" alt="Hyundai" class="max-h-8 md:max-h-14 w-auto object-contain " loading="lazy">
+        </div>
+        
+        <div class="bg-white rounded-xl md:rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.02)] p-2 md:p-4 flex justify-center items-center aspect-[16/10] border border-gray-100/50 hover:scale-105 ease-in-out transition-all duration-500">
+            <img src="http://putrasegantisetungguan.com/img/logo/orix.webp" alt="Orix" class="max-h-8 md:max-h-14 w-auto object-contain"loading="lazy">
+        </div>
+        
+        <div class="bg-white rounded-xl md:rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.02)] p-2 md:p-4 flex justify-center items-center aspect-[16/10] border border-gray-100/50 hover:scale-105 ease-in-out transition-all duration-500">
+            <img src="http://putrasegantisetungguan.com/img/logo/mnc.webp" alt="mnc" class="max-h-8 md:max-h-14 w-auto object-contain"loading="lazy">
+        </div>
+        
+        <div class="bg-white rounded-xl md:rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.02)] p-2 md:p-4 flex justify-center items-center aspect-[16/10] border border-gray-100/50 hover:scale-105 ease-in-out transition-all duration-500">
+            <img src="http://putrasegantisetungguan.com/img/logo/logo-takari.webp" alt="artha" class="max-h-8 md:max-h-14 w-auto object-contain"loading="lazy">
+        </div>
+
+        <div class="bg-white rounded-xl md:rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.02)] p-2 md:p-4 flex justify-center items-center aspect-[16/10] border border-gray-100/50 hover:scale-105 ease-in-out transition-all duration-500">
+            <img src="http://putrasegantisetungguan.com/img/logo/mobrent.webp" alt="Mobrent" class="max-h-8 md:max-h-14 w-auto object-contain"loading="lazy">
+        </div>
+        
+        <div class="bg-white rounded-xl md:rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.02)] p-2 md:p-4 flex justify-center items-center aspect-[16/10] border border-gray-100/50 hover:scale-105 ease-in-out transition-all duration-500">
+            <img src="http://putrasegantisetungguan.com/img/logo/cakrawala.webp" alt="cakrawala" class="max-h-8 md:max-h-14 w-auto object-contain"loading="lazy">
+        </div>
+        
+        <div class="bg-white rounded-xl md:rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.02)] p-2 md:p-4 flex justify-center items-center aspect-[16/10] border border-gray-100/50 hover:scale-105 ease-in-out transition-all duration-500">
+            <img src="http://putrasegantisetungguan.com/img/logo/nestle.webp" alt="nestle" class="max-h-8 md:max-h-14 w-auto object-contain"loading="lazy">
+        </div>
+        
+        <div class="bg-white rounded-xl md:rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.02)] p-2 md:p-4 flex justify-center items-center aspect-[16/10] border border-gray-100/50 hover:scale-105 ease-in-out transition-all duration-500">
+            <img src="http://putrasegantisetungguan.com/img/logo/interbat.webp" alt="KSB" class="max-h-8 md:max-h-14 w-auto object-contain"loading="lazy">
+        </div>
+
+        <div class="bg-white rounded-xl md:rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.02)] p-2 md:p-4 flex justify-center items-center aspect-[16/10] border border-gray-100/50 hover:scale-105 ease-in-out transition-all duration-500">
+            <img src="http://putrasegantisetungguan.com/img/logo/Mitsubishi_motors.webp" alt="Nestle" class="max-h-8 md:max-h-14 w-auto object-contain"loading="lazy">
+        </div>
+        
+        <div class="bg-white rounded-xl md:rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.02)] p-2 md:p-4 flex justify-center items-center aspect-[16/10] border border-gray-100/50 hover:scale-105 ease-in-out transition-all duration-500">
+            <img src="http://putrasegantisetungguan.com/img/logo/plaza_toyota.webp" alt="toyota" class="max-h-8 md:max-h-14 w-auto object-contain"loading="lazy">
+        </div>
+        
+        <div class="bg-white rounded-xl md:rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.02)] p-2 md:p-4 flex justify-center items-center aspect-[16/10] border border-gray-100/50 hover:scale-105 ease-in-out transition-all duration-500">
+            <img src="http://putrasegantisetungguan.com/img/logo/moladin.webp" alt="moladin" class="max-h-[75%] md:max-h-[70%] w-auto object-contain"loading="lazy">
+        </div>
+        
+        <div class="bg-white rounded-xl md:rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.02)] p-2 md:p-4 flex justify-center items-center aspect-[16/10] border border-gray-100/50 hover:scale-105 ease-in-out transition-all duration-500">
+            <img src="http://putrasegantisetungguan.com/img/logo/KLPM.webp" alt="BRI" class="max-h-8 md:max-h-14 w-auto object-contain"loading="lazy">
+        </div>
+
+    </div>
+
+    <div class="py-4 md:py-6 px-4 text-center bg-transparent my-auto" data-aos="zoom-out">
+        <h2 class="text-2xl md:text-3xl font-semibold text-[#4CA62B]  mb-4">Ingin berpartner dengan kami?</h2>
+        <a href="https://wa.me/6281296866705" target="blank" class="hover:shadow-[#7EA62B] group relative inline-flex items-center justify-between bg-[#4CA62B] text-white font-semibold text-base  pl-10 pr-3 py-3 rounded-full min-w-[100px] md:min-w-[200px] transition duration-300 ease-in-out hover:bg-[#439527]  hover:shadow-2xl transform hover:scale-110  focus:outline-none">
+            <span class="tracking-wide">Konsultasi</span>
+            <div class="flex items-center justify-center bg-white h-8 w-8 rounded-full shadow-sm transition duration-300 ease-in-out ml-4 md:ml-none">
+                <i class="fas fa-chevron-right text-black text-xs transition duration-300 ease-in-out group-hover:text-[#4CA62B]"></i>
+            </div>
+        </a>
+    </div>
+</section>
+<section class="md:py-32 px-4 h-auto md:min-h-screen bg-transparent justify-center items-center pb-4 md:pb-12">
+    <div class="max-w-6xl mx-auto">
+        <h2 class="text-2xl md:text-3xl font-semibold text-[#4CA62B] tracking-wider text-center mb-8 md:mb-16" data-aos="fade-up">
+            Frequently Asked Questions
+        </h2>
+        
+        <div class="space-y-3 " data-aos="fade-up" data-aos-delay="100">
+             
+
+                            <div class="faq-item border border-[#4CA62B] rounded-xl bg-white overflow-hidden transition duration-300">
+                    
+                    <button type="button" class="faq-toggle w-full p-4 flex justify-between items-center text-left bg-gray-50/50 hover:bg-gray-50 transition focus:outline-none">
+                        <span class="text-lg md:text-xl  text-[#4CA62B]">1. Apa PT PSS merupakan pemain baru di industri ini?</span>
+                        <img src="http://putrasegantisetungguan.com/icon/question.png" alt="Question" class="w-6 h-6 transition-transform duration-300 icon-arrow">
+                    </button>
+                    
+                    <div class="faq-content max-h-0 opacity-0 transition-all duration-300 ease-in-out bg-white">
+                        <div class="p-4 pt-0 text-xs md:text-sm text-gray-600 leading-relaxed border-t border-gray-100/70">
+                             Tidak, secara badan hukum PT PSS resmi berdiri pada tahun 2017. Namun, perusahaan kami merupakan wujud transformasi dan pengembangan dari CV. Guta Mandiri yang sudah berpengalaman luas mengawal pengiriman kendaraan sejak tahun 2001. Sehingga, jam terbang kami di industri ini sudah lebih dari 2 dekade.
+                        </div>
+                    </div>
+
+                </div>
+                            <div class="faq-item border border-[#4CA62B] rounded-xl bg-white overflow-hidden transition duration-300">
+                    
+                    <button type="button" class="faq-toggle w-full p-4 flex justify-between items-center text-left bg-gray-50/50 hover:bg-gray-50 transition focus:outline-none">
+                        <span class="text-lg md:text-xl  text-[#4CA62B]">2. Apa saja layanan pengiriman yang disediakan?</span>
+                        <img src="http://putrasegantisetungguan.com/icon/question.png" alt="Question" class="w-6 h-6 transition-transform duration-300 icon-arrow">
+                    </button>
+                    
+                    <div class="faq-content max-h-0 opacity-0 transition-all duration-300 ease-in-out bg-white">
+                        <div class="p-4 pt-0 text-xs md:text-sm text-gray-600 leading-relaxed border-t border-gray-100/70">
+                            Layanan yang kami sediakan adalah Self-Drive dan Towing Car dengan opsi Door to Door Service dan Port to Door Service.
+                        </div>
+                    </div>
+
+                </div>
+                            <div class="faq-item border border-[#4CA62B] rounded-xl bg-white overflow-hidden transition duration-300">
+                    
+                    <button type="button" class="faq-toggle w-full p-4 flex justify-between items-center text-left bg-gray-50/50 hover:bg-gray-50 transition focus:outline-none">
+                        <span class="text-lg md:text-xl  text-[#4CA62B]">3. Unit apa saja yang dapat dikirimkan?</span>
+                        <img src="http://putrasegantisetungguan.com/icon/question.png" alt="Question" class="w-6 h-6 transition-transform duration-300 icon-arrow">
+                    </button>
+                    
+                    <div class="faq-content max-h-0 opacity-0 transition-all duration-300 ease-in-out bg-white">
+                        <div class="p-4 pt-0 text-xs md:text-sm text-gray-600 leading-relaxed border-t border-gray-100/70">
+                            Kami melayani berbagai jenis kendaraan, mulai dari motor (skuter hingga motor besar), mobil standar, mobil mewah (luxury/sport cars), mobil baru dari showroom, mobil mogok, hingga alat berat dengan maksimal beban 5 ton (seperti traktor, ekskavator, forklift, dan genset). 
+                        </div>
+                    </div>
+
+                </div>
+                            <div class="faq-item border border-[#4CA62B] rounded-xl bg-white overflow-hidden transition duration-300">
+                    
+                    <button type="button" class="faq-toggle w-full p-4 flex justify-between items-center text-left bg-gray-50/50 hover:bg-gray-50 transition focus:outline-none">
+                        <span class="text-lg md:text-xl  text-[#4CA62B]">4. Wilayah mana saja yang dicakup oleh layanan PT PSS?</span>
+                        <img src="http://putrasegantisetungguan.com/icon/question.png" alt="Question" class="w-6 h-6 transition-transform duration-300 icon-arrow">
+                    </button>
+                    
+                    <div class="faq-content max-h-0 opacity-0 transition-all duration-300 ease-in-out bg-white">
+                        <div class="p-4 pt-0 text-xs md:text-sm text-gray-600 leading-relaxed border-t border-gray-100/70">
+                            Kami melayani pengiriman ke seluruh wilayah Indonesia melalui integrasi jalur darat dan laut.
+                        </div>
+                    </div>
+
+                </div>
+                            <div class="faq-item border border-[#4CA62B] rounded-xl bg-white overflow-hidden transition duration-300">
+                    
+                    <button type="button" class="faq-toggle w-full p-4 flex justify-between items-center text-left bg-gray-50/50 hover:bg-gray-50 transition focus:outline-none">
+                        <span class="text-lg md:text-xl  text-[#4CA62B]">5. Bagaimana PT PSS menjamin keselamatan dan kebersihan selama perjalanan?</span>
+                        <img src="http://putrasegantisetungguan.com/icon/question.png" alt="Question" class="w-6 h-6 transition-transform duration-300 icon-arrow">
+                    </button>
+                    
+                    <div class="faq-content max-h-0 opacity-0 transition-all duration-300 ease-in-out bg-white">
+                        <div class="p-4 pt-0 text-xs md:text-sm text-gray-600 leading-relaxed border-t border-gray-100/70">
+                            Pengiriman menggunakan armada towing kami dipastikan menggunakan Straping (Tali Pengikat) yang kokoh dan aman serta kami menjamin unit yang diterima akan dilakukan pencucian terlebih dahulu sehingga unit diterima dalam keadaan bersih dan aman
+                        </div>
+                    </div>
+
+                </div>
+                    </div>
+    </div>
+</section>
+<section class="w-full min-h-screen py-16 px-4 md:px-16  bg-[#fcfbf7]/70 flex flex-col justify-center overflow-hidden relative" data-aos="fade-up" delay="100">
+        <div class="absolute -top-16 -left-16 w-80 h-80 rounded-full bg-yellow-400/20 blur-3xl pointer-events-none -z-10"></div>
+        <div class="absolute -bottom-16 -right-16 w-80 h-80 rounded-full bg-[#00AD68]/20 blur-3xl pointer-events-none -z-10"></div>
+
+        <div class="max-w-6xl mx-auto">
+
+            <h2 class="text-2xl md:text-3xl font-semibold text-[#4CA62B] tracking-wider text-center mb-8">
+                Artikel
+            </h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+                                    <div class="bg-white rounded-2xl border border-emerald-500/30 overflow-hidden shadow-sm flex flex-col hover:shadow-md hover:scale-105 transition duration-300 ease-in-out hover:cursor-pointer hover:border-[#4CA62B]">
+                        
+                        <div class="aspect-video w-full bg-gray-100 overflow-hidden">
+                            <img src="http://putrasegantisetungguan.com/fotos/6a5a02ec6ea21_1784283884.webp" alt="Foto" class="w-full h-full object-cover hover:scale-105 transition duration-300 ease-in-out">
+                        </div>
+                        <div class="p-4 flex-1 flex flex-col justify-between">
+                            <div>
+                                <h3 class="text-sm font-semibold text-emerald-800 mb-1 line-clamp-1" title="Pengiriman Unit Colt Diesel">
+                                    Pengiriman Unit Colt Diesel
+                                </h3>
+                                                                    <p class="text-[11px] text-gray-400 line-clamp-2 mb-2 leading-tight">Pengiriman 1 unit Colt Diesel dengan tujuan Jakarta - Pekanbaru</p>
+                                                                <p class="text-xs text-gray-500 flex items-center gap-1.5 mb-3">
+                                    <i class="far fa-calendar-alt text-emerald-500"></i> 
+                                   17/07/26
+                                </p>
+                            </div>
+                        </div>
+                        <div class="px-4 pb-4">
+                            <a href="http://putrasegantisetungguan.com/artikel/3" class="group/link inline-flex items-center gap-1 text-xs text-gray-400 hover:text-[#4CA62B] font-medium transition duration-200">
+                                <span>Baca lebih lengkap</span>
+                                <i class="fas fa-arrow-right text-[10px] transform group-hover/link:translate-x-1 transition duration-200"></i>
+                            </a>
+                        </div>
+                    </div>
+                                    <div class="bg-white rounded-2xl border border-emerald-500/30 overflow-hidden shadow-sm flex flex-col hover:shadow-md hover:scale-105 transition duration-300 ease-in-out hover:cursor-pointer hover:border-[#4CA62B]">
+                        
+                        <div class="aspect-video w-full bg-gray-100 overflow-hidden">
+                            <img src="http://putrasegantisetungguan.com/fotos/6a5a046eef018_1784284270.webp" alt="Foto" class="w-full h-full object-cover hover:scale-105 transition duration-300 ease-in-out">
+                        </div>
+                        <div class="p-4 flex-1 flex flex-col justify-between">
+                            <div>
+                                <h3 class="text-sm font-semibold text-emerald-800 mb-1 line-clamp-1" title="Pengiriman Unit Display HMI Cilandak">
+                                    Pengiriman Unit Display HMI Cilandak
+                                </h3>
+                                                                    <p class="text-[11px] text-gray-400 line-clamp-2 mb-2 leading-tight">Pengiriman untuk unit display di Hyundai Mobil Indonesia Cabang Cilandak</p>
+                                                                <p class="text-xs text-gray-500 flex items-center gap-1.5 mb-3">
+                                    <i class="far fa-calendar-alt text-emerald-500"></i> 
+                                   17/07/26
+                                </p>
+                            </div>
+                        </div>
+                        <div class="px-4 pb-4">
+                            <a href="http://putrasegantisetungguan.com/artikel/4" class="group/link inline-flex items-center gap-1 text-xs text-gray-400 hover:text-[#4CA62B] font-medium transition duration-200">
+                                <span>Baca lebih lengkap</span>
+                                <i class="fas fa-arrow-right text-[10px] transform group-hover/link:translate-x-1 transition duration-200"></i>
+                            </a>
+                        </div>
+                    </div>
+                                    <div class="bg-white rounded-2xl border border-emerald-500/30 overflow-hidden shadow-sm flex flex-col hover:shadow-md hover:scale-105 transition duration-300 ease-in-out hover:cursor-pointer hover:border-[#4CA62B]">
+                        
+                        <div class="aspect-video w-full bg-gray-100 overflow-hidden">
+                            <img src="http://putrasegantisetungguan.com/fotos/6a6599b55235f_1785043381.webp" alt="Foto" class="w-full h-full object-cover hover:scale-105 transition duration-300 ease-in-out">
+                        </div>
+                        <div class="p-4 flex-1 flex flex-col justify-between">
+                            <div>
+                                <h3 class="text-sm font-semibold text-emerald-800 mb-1 line-clamp-1" title="Pengiriman Mini Loader">
+                                    Pengiriman Mini Loader
+                                </h3>
+                                                                    <p class="text-[11px] text-gray-400 line-clamp-2 mb-2 leading-tight">Pengiriman Mini Loader tujuan Cikarang, menuju Setu.</p>
+                                                                <p class="text-xs text-gray-500 flex items-center gap-1.5 mb-3">
+                                    <i class="far fa-calendar-alt text-emerald-500"></i> 
+                                   25/07/26
+                                </p>
+                            </div>
+                        </div>
+                        <div class="px-4 pb-4">
+                            <a href="http://putrasegantisetungguan.com/artikel/5" class="group/link inline-flex items-center gap-1 text-xs text-gray-400 hover:text-[#4CA62B] font-medium transition duration-200">
+                                <span>Baca lebih lengkap</span>
+                                <i class="fas fa-arrow-right text-[10px] transform group-hover/link:translate-x-1 transition duration-200"></i>
+                            </a>
+                        </div>
+                    </div>
+                            </div>
+
+            <div class="text-center space-y-6 pt-8">
+                <h2 class="text-xl md:text-2xl font-semibold text-[#4CA62B]">
+                    Lihat artikel lebih lengkap
+                </h2>
+                <a href="/artikel" class=" hover:shadow-[#7EA62B] group relative inline-flex items-center justify-between text-base pl-8 pr-3 py-3 rounded-full min-w-[200px] bg-[#4CA62B] text-white font-semibold transition duration-300 ease-in-out hover:bg-[#439527] hover:shadow-2xl transform hover:scale-110 focus:outline-none">
+                    selengkapnya
+                    <div class="flex items-center justify-center bg-white h-8 w-8 rounded-full shadow-sm transition duration-300 ease-in-out">
+                        <i class="fas fa-chevron-right text-black text-xs transition duration-300 ease-in-out group-hover:text-[#4CA62B]"></i>
+                    </div>
+                </a>
+            </div>
+        </div>
+</section>
+<section class="w-full h-[45vh] xl:h-[55vh]  items-center justify-center flex flex-col space-y-4" data-aos="fade-up" delay="200">
+    <div class="text-center space-y-6">
+        <h2 class="text-2xl md:text-3xl font-semibold text-green-700">
+            Mari bekerja sama
+        </h2>
+        <p class="text-[#00AD68] text-md md:text-2xl p-2">
+            Silakan langsung hubungi kami baik Via Telpon atau Chat Via WhatsApp, <br> Kami selalu siap membantu Anda dengan senang hati.
+        </p>
+    </div>
+</section>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const toggles = document.querySelectorAll('.faq-toggle');
+        
+        toggles.forEach(toggle => {
+            toggle.addEventListener('click', function () {
+                const item = this.parentElement;
+                const content = item.querySelector('.faq-content');
+                
+                // Tutup FAQ lain yang sedang terbuka (Efek Solo Accordion)
+                document.querySelectorAll('.faq-item').forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.querySelector('.faq-content').style.maxHeight = null;
+                        otherItem.querySelector('.faq-content').classList.add('opacity-0');
+                        
+                    }
+                });
+                
+                // Toggle kelas dan hitung tinggi dinamis konten
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null;
+                    content.classList.add('opacity-0');
+
+                } else {
+                    // scrollHeight mengambil tinggi asli teks di dalamnya secara akurat
+                    content.style.maxHeight = content.scrollHeight + "px";
+                    content.classList.remove('opacity-0');
+                }
+            });
+        });
+    });
+</script>
+    </main>
+
+    <footer class="bg-[#4CA62B] text-white pt-16 relative z-10 font-sans">
+    <div class="max-w-7xl px-6 w-full mx-auto flex flex-col md:flex-row flex-wrap justify-between gap-8 md:gap-6">
+        <div data-aos="fade-up" data-aos-delay="200" class="min-w-[240px] max-w-xs flex-1 md:flex-initial">
+            <div data-aos="fade-up" data-aos-delay="50" class="flex flex-col min-w-[220px] flex-1 md:flex-initial mb-4 md:mb-0 items-start">
+                <img src="http://putrasegantisetungguan.com/img/logo/LOGO PSS.webp" alt="logo" 
+                class="w-20 h-12 object-contain scale-[1.6] -translate-x-2 -translate-y-2 origin-left img-fluid ">
+            </div>
+            <div class="text-sm text-white/80 leading-relaxed md:text-left">   
+                <p class="text-justify">
+                    PT. Putra Setunggu Setinggian berkomitmen memberikan layanan logistik dan transportasi mobil terbaik, mengedepankan keamanan serta efisiensi demi kepuasan klien kami di seluruh wilayah nusantara.
+                </p>
+                <p class="pt-3 inline-block font-semibold hover:text-white transition-all duration-200 ease-in-out cursor-pointer">
+                    Download Company Profile  
+                    <a href="http://putrasegantisetungguan.com/media/ppt pss.pdf" class="hover:text-white transition-all duration-200 ease-in-out" download>
+                        <i class="fas fa-download ml-2"></i>
+                    </a> 
+                </p>
+            </div>
+        </div>
+        <div data-aos="fade-up" data-aos-delay="100" class="flex flex-col min-w-[200px] flex-1 md:flex-initial">
+            <h3 class="font-bold text-base uppercase tracking-wider mb-5 text-white/90 border-b border-white/20 pb-2 md:border-none md:pb-0">
+                Navigasi
+            </h3>
+            <ul class="space-y-3 text-sm text-white/80">
+                <li>
+                    <a href="/" class="hover:text-white hover:translate-x-1 inline-block transition-all duration-200 ease-in-out">Beranda</a>
+                </li>
+                <li>
+                    <a href="/tentangkami" class="hover:text-white hover:translate-x-1 inline-block transition-all duration-200 ease-in-out">Tentang Kami</a>
+                </li>
+                <li>
+                    <a href="/selfdrive" class="hover:text-white hover:translate-x-1 inline-block transition-all duration-200 ease-in-out">Self Drive</a>
+                </li>
+                <li>
+                    <a href="/towcar" class="hover:text-white hover:translate-x-1 inline-block transition-all duration-200 ease-in-out">Tow Car</a>
+                </li>
+            </ul>
+        </div>
+
+        
+        <div data-aos="fade-up" data-aos-delay="300" class="min-w-[240px] max-w-xs flex-1 md:flex-initial">
+            <h3 class="font-bold text-base uppercase tracking-wider mb-5 text-white/90 border-b border-white/20 pb-2 md:border-none md:pb-0">
+                Kantor Kami
+            </h3>
+            <ul class="space-y-4 text-sm text-white/80">
+                <li class="flex items-start gap-3">
+                    <i class="fas fa-map-marker-alt mt-1 text-white flex-shrink-0 w-4 text-center"></i> 
+                    <a href="https://maps.app.goo.gl/tMJab4vv9hhj2CvXA" target="_blank" class="hover:text-white transition-colors duration-200">
+                        Jl. Raya Kalimalang No.40, Jatimulya, Bekasi Timur, Indonesia
+                    </a>
+                </li>
+                <li class="flex items-center gap-3">
+                    <i class="fas fa-phone text-white flex-shrink-0 w-4 text-center"></i> 
+                    <span class="hover:text-white transition-colors duration-200">(021) 4567891</span>
+                </li>
+                <li class="flex items-center gap-3">
+                    <i class="fab fa-whatsapp text-white flex-shrink-0 w-4 text-center"></i>
+                    <a href="https://wa.me/6281296866705" target="_blank" class="hover:text-white transition-colors duration-200">081296866705</a>
+                </li>
+                <li class="flex items-center gap-3">
+                    <i class="fas fa-envelope text-white flex-shrink-0 w-4 text-center"></i> 
+                    <a href="mailto:rickygumay@putrasegantisetungguan.com" class="hover:text-white transition-colors duration-200 break-all">
+                        rickygumay@putrasegantisetungguan.com
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div data-aos="fade-up" data-aos-delay="400" class="min-w-[200px] flex-1 md:flex-initial">
+            <h3 class="font-bold text-base uppercase tracking-wider mb-5 text-white/90 border-b border-white/20 pb-2 md:border-none md:pb-0">
+                Jam Operasional
+            </h3>
+            <ul class="space-y-3 text-sm text-white/80">
+                <li class="flex items-center gap-3">
+                    <i class="fas fa-calendar-alt text-white flex-shrink-0 w-4 text-center"></i>
+                    <span>Senin - Minggu</span>
+                </li>
+                <li class="flex items-center gap-3">
+                    <i class="fas fa-clock text-white flex-shrink-0 w-4 text-center"></i>
+                    <span>24 Jam / 7 Hari</span>
+                </li>
+            </ul>
+        </div>
+        
+    </div>
+
+
+    <div class="w-full bg-[#00AD68] py-4 mt-12 border-t border-white/10">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-2 text-[10px] md:text-xs text-white/90 tracking-wide">
+            <div class="flex flex-row items-center">
+                &copy; 2026 <img src="http://putrasegantisetungguan.com/img/logo/LOGO PSS.webp" alt="logo" class="w-12 h-12 object-contain mx-1">
+                <span class="font-semibold">PT. Putra Setunggu Setinggian. All Rights Reserved.</span>
+            </div>
+            <div class="text-white/70 text-[11px]">
+                Developed by <a href="#" class="font-medium text-white hover:underline">2neixx.dev</a>
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" defer></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            AOS.init({
+                duration: 800,
+                easing: 'ease-in-out',
+                once: true,
+                offset: 100
+            });
+
+            const navbar = document.getElementById('main-navbar');
+            
+            const customScrollColor = "#2BA661";
+            const customTopClass = "bg-transparent";
+
+            if (navbar) {
+                window.addEventListener('scroll', () => {
+                    if (window.scrollY > 50) {
+                        navbar.style.backgroundColor = customScrollColor;
+                        navbar.classList.add('shadow-lg', 'py-2');
+                        navbar.classList.remove(customTopClass, 'py-3');
+                    } else {
+                        navbar.style.backgroundColor = '';
+                        navbar.classList.add(customTopClass, 'py-3');
+                        navbar.classList.remove('shadow-lg', 'py-2');
+                    }
+                });
+            }
+
+            const menuBtn = document.getElementById('menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            if (menuBtn && mobileMenu) {
+                menuBtn.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+        });
+    </script>
+</body>
+</html>

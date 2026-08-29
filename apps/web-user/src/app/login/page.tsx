@@ -1,14 +1,26 @@
 'use client';
 
-import { useActionState } from 'react';
+import { useActionState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { requestOtpAction, verifyOtpAction } from './actions';
 
 export default function LoginPage() {
   const [requestState, requestAction, requestPending] = useActionState(requestOtpAction, undefined);
   const [verifyState, verifyAction, verifyPending] = useActionState(verifyOtpAction, undefined);
+  const formRef = useRef<HTMLFormElement>(null);
 
   const step = requestState?.ok ? 'otp' : 'email';
+
+  // Auto-submit in dev mode
+  useEffect(() => {
+    if (step === 'otp' && requestState?.devOtp && formRef.current) {
+      // Small timeout for visual feedback
+      const timer = setTimeout(() => {
+        formRef.current?.requestSubmit();
+      }, 500);
+      return () => clearTimeout(timer);
+    }
+  }, [step, requestState?.devOtp]);
 
   return (
     <div className="flex min-h-screen items-center justify-center bg-slate-100 px-4">
@@ -25,6 +37,7 @@ export default function LoginPage() {
                 name="email"
                 type="email"
                 required
+                defaultValue="customer@abc.co.id"
                 className="mt-1 w-full rounded-md border border-slate-300 px-3 py-2 text-sm focus:border-slate-500 focus:outline-none"
                 placeholder="customer@abc.co.id"
               />
@@ -41,14 +54,14 @@ export default function LoginPage() {
         )}
 
         {step === 'otp' && (
-          <form action={verifyAction} className="mt-6 space-y-4">
+          <form ref={formRef} action={verifyAction} className="mt-6 space-y-4">
             <input type="hidden" name="email" value={requestState?.email} />
             <p className="text-sm text-slate-600">
               Kode OTP telah dikirim ke <span className="font-medium">{requestState?.email}</span>.
             </p>
             {requestState?.devOtp && (
               <p className="rounded-md bg-amber-50 px-3 py-2 text-xs text-amber-800">
-                Mode pengembangan — kode OTP: <span className="font-mono font-bold">{requestState.devOtp}</span>
+                Mode pengembangan — Auto-login dengan OTP: <span className="font-mono font-bold">{requestState.devOtp}</span>
               </p>
             )}
             <div>
@@ -57,6 +70,7 @@ export default function LoginPage() {
                 name="code"
                 required
                 maxLength={6}
+                defaultValue={requestState?.devOtp || ''}
                 className="mt-1 w-full rounded-md border border-slate-300 px-3 py-2 text-center text-lg tracking-[0.5em] focus:border-slate-500 focus:outline-none"
                 placeholder="------"
               />

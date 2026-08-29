@@ -41,7 +41,7 @@ export function NewOrderForm() {
         <div className="mt-4 grid gap-4 sm:grid-cols-2">
           <div>
             <label className="block text-sm font-medium text-slate-700">Nama PIC</label>
-            <input name="pic" value={pic} onChange={(e) => setPic(e.target.value)} required className="mt-1 w-full rounded-md border border-slate-300 px-3 py-2 text-sm" />
+            <input name="pic" value={pic} onChange={(e) => setPic(e.target.value)} required className="mt-1 w-full rounded-md border border-slate-300 px-3 py-2 text-sm text-slate-900 focus:border-pss-green-500 focus:outline-none focus:ring-1 focus:ring-pss-green-500" />
           </div>
           <div>
             <label className="block text-sm font-medium text-slate-700">Tanggal Pickup Diminta</label>
@@ -51,23 +51,23 @@ export function NewOrderForm() {
               value={requestPickupDate}
               onChange={(e) => setRequestPickupDate(e.target.value)}
               required
-              className="mt-1 w-full rounded-md border border-slate-300 px-3 py-2 text-sm"
+              className="mt-1 w-full rounded-md border border-slate-300 px-3 py-2 text-sm text-slate-900 focus:border-pss-green-500 focus:outline-none focus:ring-1 focus:ring-pss-green-500"
             />
           </div>
           <div>
             <label className="block text-sm font-medium text-slate-700">Kota Asal</label>
-            <input name="originCity" value={originCity} onChange={(e) => setOriginCity(e.target.value)} required className="mt-1 w-full rounded-md border border-slate-300 px-3 py-2 text-sm" />
+            <input name="originCity" value={originCity} onChange={(e) => setOriginCity(e.target.value)} required className="mt-1 w-full rounded-md border border-slate-300 px-3 py-2 text-sm text-slate-900 focus:border-pss-green-500 focus:outline-none focus:ring-1 focus:ring-pss-green-500" />
           </div>
           <div>
             <label className="block text-sm font-medium text-slate-700">Kota Tujuan</label>
-            <input name="destinationCity" value={destinationCity} onChange={(e) => setDestinationCity(e.target.value)} required className="mt-1 w-full rounded-md border border-slate-300 px-3 py-2 text-sm" />
+            <input name="destinationCity" value={destinationCity} onChange={(e) => setDestinationCity(e.target.value)} required className="mt-1 w-full rounded-md border border-slate-300 px-3 py-2 text-sm text-slate-900 focus:border-pss-green-500 focus:outline-none focus:ring-1 focus:ring-pss-green-500" />
           </div>
           <div className="sm:col-span-2">
             <label className="block text-sm font-medium text-slate-700">Catatan Khusus (opsional)</label>
             <input
               value={specialInstruction}
               onChange={(e) => setSpecialInstruction(e.target.value)}
-              className="mt-1 w-full rounded-md border border-slate-300 px-3 py-2 text-sm"
+              className="mt-1 w-full rounded-md border border-slate-300 px-3 py-2 text-sm text-slate-900 focus:border-pss-green-500 focus:outline-none focus:ring-1 focus:ring-pss-green-500"
               placeholder="Instruksi tambahan untuk driver/operator..."
             />
           </div>
@@ -108,7 +108,7 @@ export function NewOrderForm() {
                     data-testid={`shipmentType-${i}`}
                     value={v.shipmentType}
                     onChange={(e) => updateVehicle(i, { shipmentType: e.target.value as VehicleInput['shipmentType'] })}
-                    className="mt-1 w-full rounded-md border border-slate-300 px-2 py-1.5 text-sm"
+                    className="mt-1 w-full rounded-md border border-slate-300 px-2 py-1.5 text-sm text-slate-900 focus:border-pss-green-500 focus:outline-none focus:ring-1 focus:ring-pss-green-500"
                   >
                     <option value="TOWING">Towing</option>
                     <option value="SELF_DRIVE">Self Drive</option>
@@ -116,23 +116,23 @@ export function NewOrderForm() {
                 </div>
                 <div>
                   <label className="block text-xs font-medium text-slate-600">Merek Mobil</label>
-                  <input data-testid={`vehicleBrand-${i}`} value={v.vehicleBrand} onChange={(e) => updateVehicle(i, { vehicleBrand: e.target.value })} required className="mt-1 w-full rounded-md border border-slate-300 px-2 py-1.5 text-sm" />
+                  <input data-testid={`vehicleBrand-${i}`} value={v.vehicleBrand} onChange={(e) => updateVehicle(i, { vehicleBrand: e.target.value })} required className="mt-1 w-full rounded-md border border-slate-300 px-2 py-1.5 text-sm text-slate-900 focus:border-pss-green-500 focus:outline-none focus:ring-1 focus:ring-pss-green-500" />
                 </div>
                 <div>
                   <label className="block text-xs font-medium text-slate-600">Jenis/Model Mobil</label>
-                  <input data-testid={`vehicleModel-${i}`} value={v.vehicleModel} onChange={(e) => updateVehicle(i, { vehicleModel: e.target.value })} required className="mt-1 w-full rounded-md border border-slate-300 px-2 py-1.5 text-sm" />
+                  <input data-testid={`vehicleModel-${i}`} value={v.vehicleModel} onChange={(e) => updateVehicle(i, { vehicleModel: e.target.value })} required className="mt-1 w-full rounded-md border border-slate-300 px-2 py-1.5 text-sm text-slate-900 focus:border-pss-green-500 focus:outline-none focus:ring-1 focus:ring-pss-green-500" />
                 </div>
                 <div>
                   <label className="block text-xs font-medium text-slate-600">Plat Nomor</label>
-                  <input data-testid={`plateNumber-${i}`} value={v.plateNumber} onChange={(e) => updateVehicle(i, { plateNumber: e.target.value })} required className="mt-1 w-full rounded-md border border-slate-300 px-2 py-1.5 text-sm" />
+                  <input data-testid={`plateNumber-${i}`} value={v.plateNumber} onChange={(e) => updateVehicle(i, { plateNumber: e.target.value })} required className="mt-1 w-full rounded-md border border-slate-300 px-2 py-1.5 text-sm text-slate-900 focus:border-pss-green-500 focus:outline-none focus:ring-1 focus:ring-pss-green-500" />
                 </div>
                 <div>
                   <label className="block text-xs font-medium text-slate-600">Nomor Rangka</label>
-                  <input data-testid={`chassisNumber-${i}`} value={v.chassisNumber} onChange={(e) => updateVehicle(i, { chassisNumber: e.target.value })} required className="mt-1 w-full rounded-md border border-slate-300 px-2 py-1.5 text-sm" />
+                  <input data-testid={`chassisNumber-${i}`} value={v.chassisNumber} onChange={(e) => updateVehicle(i, { chassisNumber: e.target.value })} required className="mt-1 w-full rounded-md border border-slate-300 px-2 py-1.5 text-sm text-slate-900 focus:border-pss-green-500 focus:outline-none focus:ring-1 focus:ring-pss-green-500" />
                 </div>
                 <div>
                   <label className="block text-xs font-medium text-slate-600">Nomor Mesin</label>
-                  <input data-testid={`engineNumber-${i}`} value={v.engineNumber} onChange={(e) => updateVehicle(i, { engineNumber: e.target.value })} required className="mt-1 w-full rounded-md border border-slate-300 px-2 py-1.5 text-sm" />
+                  <input data-testid={`engineNumber-${i}`} value={v.engineNumber} onChange={(e) => updateVehicle(i, { engineNumber: e.target.value })} required className="mt-1 w-full rounded-md border border-slate-300 px-2 py-1.5 text-sm text-slate-900 focus:border-pss-green-500 focus:outline-none focus:ring-1 focus:ring-pss-green-500" />
                 </div>
               </div>
             </div>
