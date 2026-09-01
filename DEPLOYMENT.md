@@ -43,15 +43,16 @@ Database Supabase Anda sudah aktif dan terisi data:
 
 ## 3. Struktur URL Setelah Live
 
-Aplikasi Anda kini memiliki satu domain terpadu (contoh: `https://hulubalang.vercel.app`):
+Aplikasi Anda kini memiliki domain resmi Hulubalang:
 
-- **Website Publik (Company Profile):** `https://hulubalang.vercel.app`
-- **Login Pelanggan:** `https://hulubalang.vercel.app/login`
-- **Portal Order & Live Tracking:** `https://hulubalang.vercel.app/orders`
-- **Login Admin / Internal:** `https://hulubalang.vercel.app/admin/login`
-- **Dashboard Admin:** `https://hulubalang.vercel.app/admin/dashboard`
-- **Tugas Mobile Driver:** `https://hulubalang.vercel.app/admin/my-trips`
-- **Verifikasi Mobile Pool Keeper:** `https://hulubalang.vercel.app/admin/checkpoints`
+- **Domain Utama:** **`https://hulubalang-pss.vercel.app`** atau **`https://hulubalang-tms.vercel.app`**
+- **Website Publik (Company Profile):** `https://hulubalang-pss.vercel.app`
+- **Login Pelanggan:** `https://hulubalang-pss.vercel.app/login`
+- **Portal Order & Live Tracking:** `https://hulubalang-pss.vercel.app/orders`
+- **Login Admin / Internal:** `https://hulubalang-pss.vercel.app/admin/login`
+- **Dashboard Admin:** `https://hulubalang-pss.vercel.app/admin/dashboard`
+- **Tugas Mobile Driver:** `https://hulubalang-pss.vercel.app/admin/my-trips`
+- **Verifikasi Mobile Pool Keeper:** `https://hulubalang-pss.vercel.app/admin/checkpoints`
 
 ---
 
