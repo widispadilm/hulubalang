@@ -6,33 +6,32 @@ Sistem **Hulubalang TMS (PT Putra Seganti Setungguan)** telah **berhasil di-depl
 
 ## 🌐 URL Website Live Resmi (Hulubalang)
 
-👉 **Domain Utama:** **[https://hulubalang-pss.vercel.app](https://hulubalang-pss.vercel.app)**  
-*(Domain Alternatif: [https://hulubalang-tms.vercel.app](https://hulubalang-tms.vercel.app) & [https://hulubalang-efemsgroup.vercel.app](https://hulubalang-efemsgroup.vercel.app))*
+👉 **Domain:** **[https://hulubalang.vercel.app](https://hulubalang.vercel.app)**
 
 ---
 
 ## 📱 Daftar Halaman Siap Pakai
 
 1. **Company Profile Publik:**
-   - Beranda: [https://hulubalang-pss.vercel.app](https://hulubalang-pss.vercel.app)
-   - Tentang Kami: [https://hulubalang-pss.vercel.app/tentang-kami](https://hulubalang-pss.vercel.app/tentang-kami)
-   - Layanan Self Drive: [https://hulubalang-pss.vercel.app/layanan/self-drive](https://hulubalang-pss.vercel.app/layanan/self-drive)
-   - Layanan Tow Car: [https://hulubalang-pss.vercel.app/layanan/tow-car](https://hulubalang-pss.vercel.app/layanan/tow-car)
-   - Artikel: [https://hulubalang-pss.vercel.app/artikel](https://hulubalang-pss.vercel.app/artikel)
+   - Beranda: [https://hulubalang.vercel.app](https://hulubalang.vercel.app)
+   - Tentang Kami: [https://hulubalang.vercel.app/tentang-kami](https://hulubalang.vercel.app/tentang-kami)
+   - Layanan Self Drive: [https://hulubalang.vercel.app/layanan/self-drive](https://hulubalang.vercel.app/layanan/self-drive)
+   - Layanan Tow Car: [https://hulubalang.vercel.app/layanan/tow-car](https://hulubalang.vercel.app/layanan/tow-car)
+   - Artikel: [https://hulubalang.vercel.app/artikel](https://hulubalang.vercel.app/artikel)
 
 2. **Portal Pelanggan:**
-   - Login OTP Pelanggan: [https://hulubalang-pss.vercel.app/login](https://hulubalang-pss.vercel.app/login)
-   - Daftar Order Saya: [https://hulubalang-pss.vercel.app/orders](https://hulubalang-pss.vercel.app/orders)
-   - Buat Order Baru: [https://hulubalang-pss.vercel.app/orders/new](https://hulubalang-pss.vercel.app/orders/new)
+   - Login OTP Pelanggan: [https://hulubalang.vercel.app/login](https://hulubalang.vercel.app/login)
+   - Daftar Order Saya: [https://hulubalang.vercel.app/orders](https://hulubalang.vercel.app/orders)
+   - Buat Order Baru: [https://hulubalang.vercel.app/orders/new](https://hulubalang.vercel.app/orders/new)
 
 3. **Portal Admin, Operasional, Driver & Pool Keeper:**
-   - Login Internal: [https://hulubalang-pss.vercel.app/admin/login](https://hulubalang-pss.vercel.app/admin/login)
-   - Dashboard: [https://hulubalang-pss.vercel.app/admin/dashboard](https://hulubalang-pss.vercel.app/admin/dashboard)
-   - Manajemen Orders: [https://hulubalang-pss.vercel.app/admin/orders](https://hulubalang-pss.vercel.app/admin/orders)
-   - Monitoring Trips: [https://hulubalang-pss.vercel.app/admin/trips](https://hulubalang-pss.vercel.app/admin/trips)
-   - Tugas Mobile Driver: [https://hulubalang-pss.vercel.app/admin/my-trips](https://hulubalang-pss.vercel.app/admin/my-trips)
-   - Verifikasi Mobile Penjaga Pool: [https://hulubalang-pss.vercel.app/admin/checkpoints](https://hulubalang-pss.vercel.app/admin/checkpoints)
-   - Master Pool: [https://hulubalang-pss.vercel.app/admin/pools](https://hulubalang-pss.vercel.app/admin/pools)
+   - Login Internal: [https://hulubalang.vercel.app/admin/login](https://hulubalang.vercel.app/admin/login)
+   - Dashboard: [https://hulubalang.vercel.app/admin/dashboard](https://hulubalang.vercel.app/admin/dashboard)
+   - Manajemen Orders: [https://hulubalang.vercel.app/admin/orders](https://hulubalang.vercel.app/admin/orders)
+   - Monitoring Trips: [https://hulubalang.vercel.app/admin/trips](https://hulubalang.vercel.app/admin/trips)
+   - Tugas Mobile Driver: [https://hulubalang.vercel.app/admin/my-trips](https://hulubalang.vercel.app/admin/my-trips)
+   - Verifikasi Mobile Penjaga Pool: [https://hulubalang.vercel.app/admin/checkpoints](https://hulubalang.vercel.app/admin/checkpoints)
+   - Master Pool: [https://hulubalang.vercel.app/admin/pools](https://hulubalang.vercel.app/admin/pools)
 
 ---
 

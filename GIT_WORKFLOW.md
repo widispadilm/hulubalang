@@ -70,6 +70,6 @@ git checkout dev-mac
 ---
 
 ## 🚀 Keuntungan Alur Ini:
-1. **Branch `main` selalu berisi versi stabil paling baru** yang siap dilihat klien / manajemen di Vercel (`hulubalang-pss.vercel.app`).
+1. **Branch `main` selalu berisi versi stabil paling baru** yang siap dilihat klien / manajemen di Vercel (`hulubalang.vercel.app`).
 2. **Riwayat pengerjaan tetap rapi** tercatat apakah dikerjakan dari Windows atau Mac.
 3. **Bebas konflik (conflict-free):** Saat Anda pindah dari Windows ke Mac (atau sebaliknya), Anda cukup menjalankan `git pull origin main && git merge main`.

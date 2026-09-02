@@ -6,13 +6,12 @@ Sistem Informasi Manajemen Transportasi & Ekspedisi Kendaraan (TMS) PT Putra Seg
 
 ## 🌐 Website & Aplikasi Live (Production)
 
-- **Domain Utama:** **[https://hulubalang-pss.vercel.app](https://hulubalang-pss.vercel.app)**
-- **Domain Alternatif:** **[https://hulubalang-tms.vercel.app](https://hulubalang-tms.vercel.app)**
+- **Domain:** **[https://hulubalang.vercel.app](https://hulubalang.vercel.app)**
 
 ### Akses Halaman:
-1. **Company Profile PT PSS:** [https://hulubalang-pss.vercel.app](https://hulubalang-pss.vercel.app)
-2. **Portal Pelanggan (Order & Live Tracking):** [https://hulubalang-pss.vercel.app/login](https://hulubalang-pss.vercel.app/login)
-3. **Portal Admin, Operasional, Driver & Pool Keeper:** [https://hulubalang-pss.vercel.app/admin/login](https://hulubalang-pss.vercel.app/admin/login)
+1. **Company Profile PT PSS:** [https://hulubalang.vercel.app](https://hulubalang.vercel.app)
+2. **Portal Pelanggan (Order & Live Tracking):** [https://hulubalang.vercel.app/login](https://hulubalang.vercel.app/login)
+3. **Portal Admin, Operasional, Driver & Pool Keeper:** [https://hulubalang.vercel.app/admin/login](https://hulubalang.vercel.app/admin/login)
 
 ---
 
@@ -59,14 +58,26 @@ apps/
 # 1. Install dependencies
 npm install
 
-# 2. Jalankan aplikasi web
+# 2. Siapkan environment variable
+#    Buat file apps/web/.env berisi DATABASE_URL & JWT_SECRET
+#    (contoh untuk PostgreSQL via Docker: docker compose up -d db)
+
+# 3. Buat tabel & isi data awal
+npm run prisma:push --workspace=apps/web
+npm run prisma:seed --workspace=apps/web
+
+# 4. Jalankan aplikasi web
 npm run dev
 
 # Buka http://localhost:3000 di browser
 ```
 
+> **Penting:** database baru (termasuk Supabase yang baru dibuat) wajib di-seed dulu.
+> Tanpa itu tabelnya kosong dan semua percobaan login akan gagal.
+
 ---
 
 ## 📄 Dokumentasi Tambahan
-- [Panduan Deployment Vercel](file:///d:/Projects/Hulu/DEPLOYMENT.md)
-- [Walkthrough & Riwayat Perubahan](file:///d:/Projects/Hulu/walkthrough.md)
+- [Panduan Deployment Vercel](DEPLOYMENT.md)
+- [Walkthrough & Riwayat Perubahan](walkthrough.md)
+- [Panduan Penggunaan](Panduan_Penggunaan_Hulubalang.md)

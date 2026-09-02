@@ -8,14 +8,26 @@ Anda hanya membutuhkan **1 Akun Vercel** dan **1 Akun Supabase** — **100% Grat
 
 ## 1. Status Database Supabase Anda
 
-Database Supabase Anda sudah aktif dan terisi data:
-- **Supabase URL:** `https://iimcidhaqldpujjbhdvi.supabase.co`
 - **Region:** `ap-south-1`
-- **Connection URI (Prisma):**
-  ```env
-  DATABASE_URL="postgresql://postgres.iimcidhaqldpujjbhdvi:hulubalang123@aws-0-ap-south-1.pooler.supabase.com:5432/postgres?schema=public"
-  ```
-- **Tabel & Data Seed:** Sudah otomatis terbuat dan diisi akun default.
+- **Connection URI (Prisma):** ambil dari dashboard Supabase → **Project Settings → Database → Connection string → URI**, lalu simpan sebagai `DATABASE_URL`.
+
+> ⚠️ **Jangan menuliskan password database, `JWT_SECRET`, atau API key di file ini.**
+> Semua nilai rahasia disimpan di **Environment Variables Vercel** dan file `.env` lokal
+> (`.env` sudah masuk `.gitignore`). File ini ikut ter-commit ke GitHub — apa pun yang
+> ditulis di sini bisa terbaca orang lain.
+
+### Membuat tabel & mengisi data awal
+
+Database yang baru dibuat masih kosong. Jalankan sekali dari komputer lokal, dengan
+`DATABASE_URL` yang menunjuk ke Supabase:
+
+```bash
+npm run prisma:push --workspace=apps/web   # buat semua tabel
+npm run prisma:seed --workspace=apps/web   # isi akun default & data contoh
+```
+
+Tanpa langkah ini, aplikasi akan ter-deploy dengan sukses tetapi **semua percobaan login gagal**
+karena tabelnya kosong.
 
 ---
 
@@ -27,17 +39,30 @@ Database Supabase Anda sudah aktif dan terisi data:
 4. Pada halaman konfigurasi project:
    - **Project Name:** `hulubalang` (atau nama pilihan Anda)
    - **Framework Preset:** `Next.js`
-   - **Root Directory:** Klik *Edit* dan pilih folder **`apps/web`**.
-5. Buka accordion **Environment Variables**, masukkan 4 variabel ini:
+   - **Root Directory:** Klik *Edit* dan pilih folder **`apps/web`** — **wajib**, karena repo ini
+     monorepo. Kalau dibiarkan di root, build akan "sukses" tetapi semua halaman balas **404**.
+   - Pastikan **Include files outside of the root directory in the Build Step** dalam keadaan
+     **Enabled** (dependency-nya di-hoist ke root repo oleh npm workspaces).
+5. Buka accordion **Environment Variables**, masukkan 4 variabel ini (nilainya ambil dari
+   dashboard Supabase Anda, jangan dari dokumen ini):
 
-| Nama Variabel | Nilai / Value |
+| Nama Variabel | Sumber Nilai |
 |---|---|
-| `DATABASE_URL` | `postgresql://postgres.iimcidhaqldpujjbhdvi:hulubalang123@aws-0-ap-south-1.pooler.supabase.com:5432/postgres?schema=public` |
-| `JWT_SECRET` | `hulubalang_super_secret_jwt_key_12345` |
-| `NEXT_PUBLIC_SUPABASE_URL` | `https://iimcidhaqldpujjbhdvi.supabase.co` |
-| `NEXT_PUBLIC_SUPABASE_ANON_KEY` | `sb_publishable_fSUe0gRNCSfVM0YdlOR1EA_2q3k6VUb` |
+| `DATABASE_URL` | Supabase → Project Settings → Database → Connection string (URI) |
+| `JWT_SECRET` | Bebas, string acak panjang — buat sendiri, jangan dipakai ulang dari contoh |
+| `NEXT_PUBLIC_SUPABASE_URL` | Supabase → Project Settings → API → Project URL |
+| `NEXT_PUBLIC_SUPABASE_ANON_KEY` | Supabase → Project Settings → API → anon/public key |
+
+   Centang environment **Production**, **Preview**, dan **Development** untuk keempatnya, supaya
+   deployment preview dari branch lain tidak ikut error.
 
 6. Klik tombol **Deploy** dan tunggu 1–2 menit hingga selesai!
+
+> **Catatan penting soal "prebuilt deployment":** jangan deploy dengan
+> `vercel deploy --prebuilt`. Deployment prebuilt mengunggah hasil build lokal apa adanya,
+> sehingga **mengabaikan Root Directory dan Environment Variables** — gejalanya deployment
+> terlihat sukses tetapi semua halaman balas `404: NOT_FOUND`. Biarkan Vercel yang membangun,
+> yaitu lewat push ke branch `main` atau `npx vercel --prod` (tanpa `--prebuilt`).
 
 ---
 
@@ -45,14 +70,14 @@ Database Supabase Anda sudah aktif dan terisi data:
 
 Aplikasi Anda kini memiliki domain resmi Hulubalang:
 
-- **Domain Utama:** **`https://hulubalang-pss.vercel.app`** atau **`https://hulubalang-tms.vercel.app`**
-- **Website Publik (Company Profile):** `https://hulubalang-pss.vercel.app`
-- **Login Pelanggan:** `https://hulubalang-pss.vercel.app/login`
-- **Portal Order & Live Tracking:** `https://hulubalang-pss.vercel.app/orders`
-- **Login Admin / Internal:** `https://hulubalang-pss.vercel.app/admin/login`
-- **Dashboard Admin:** `https://hulubalang-pss.vercel.app/admin/dashboard`
-- **Tugas Mobile Driver:** `https://hulubalang-pss.vercel.app/admin/my-trips`
-- **Verifikasi Mobile Pool Keeper:** `https://hulubalang-pss.vercel.app/admin/checkpoints`
+- **Domain Utama:** **`https://hulubalang.vercel.app`**
+- **Website Publik (Company Profile):** `https://hulubalang.vercel.app`
+- **Login Pelanggan:** `https://hulubalang.vercel.app/login`
+- **Portal Order & Live Tracking:** `https://hulubalang.vercel.app/orders`
+- **Login Admin / Internal:** `https://hulubalang.vercel.app/admin/login`
+- **Dashboard Admin:** `https://hulubalang.vercel.app/admin/dashboard`
+- **Tugas Mobile Driver:** `https://hulubalang.vercel.app/admin/my-trips`
+- **Verifikasi Mobile Pool Keeper:** `https://hulubalang.vercel.app/admin/checkpoints`
 
 ---
 
