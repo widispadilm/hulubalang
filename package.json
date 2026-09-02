@@ -18,5 +18,9 @@
     "@prisma/engines@5.22.0": true,
     "unrs-resolver@1.12.2": true,
     "fsevents@2.3.3": true
+  },
+  "packageManager": "npm@10.9.0",
+  "devDependencies": {
+    "turbo": "^2.10.12"
   }
 }
